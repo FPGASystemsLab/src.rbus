@@ -14,22 +14,6 @@ Jakub Siast<br>Supervisor: Prof. dr hab. inż. Marek Domański
 
 Poznań, 2019
 
-I owe many thanks to my colleague, Adam Łuczak who has offered me his time and inspired me with many good ideas.
-
-I would like to thank professor Marek Domański, for his time and help that have guided me towards completing this dissertation.
-
-I am grateful to my colleagues from the Chair of Multimedia Telecommunications and Microelectronics for all the inspiring years we have spent together. Furthermore, I need to thank Krzysztof Klimaszewski, Dawid Mieloch, and Adrian Dziembowski, for careful reading of the manuscript.
-
-This dissertation is dedicated to my beloved parents: Elżbieta and Tadeusz, who have supported me unconditionally.
-
-Moje podziękowania należą się Adamowi Łuczakowi, który poświęcił mi swój czas i zainspirował mnie dobrymi pomysłami.
-
-Chciałbym również podziękować panu profesorowi Markowi Domańskiemu, za jego czas i pomoc, która doprowadziła mnie do ukończenia tej rozprawy.
-
-Jestem wdzięczny kolegom i koleżankom z Katedry Telekomunikacji Multimedialnej i Mikroelektroniki za inspirujące, wspólnie spędzone lata. Ponadto dziękuję Krzysztofowi Klimaszewskiemu, Dawidowi Mielochowi i Adrianowi Dziembowskiemu za wnikliwe przeczytanie tekstu rozprawy.
-
-Rozprawę tę dedykuję moim ukochanym rodzicom: Elżbiecie i Tadeuszowi, którzy zawsze mnie wspierali.
-
 ## Table of contents
 
 Abstract ..... 8
