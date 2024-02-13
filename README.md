@@ -17,15 +17,25 @@ Poznań, 2019
 ## Table of contents
 
 Abstract ..... 8
+
 Streszczenie ..... 9
+
 List of terms and abbreviations ..... 10
+
 Chapter 1. Introduction ..... 14
+
 1.1. Scope of the dissertation ..... 14
+
 1.2. Motivation ..... 15
+
 1.3. Goals and theses of the dissertation ..... 17
+
 1.4. Overview of the dissertation ..... 18
+
 Chapter 2. Study of FPGA devices from the point of view of intra-device communication ..... 20
+
 2.1. Restriction on considered FPGAs ..... 22
+
 2.2. Common features of considered FPGAs ..... 23
 2.2.1. Common features of distributed RAM ..... 25
 2.2.2. Synchronous dynamic RAM support ..... 25
