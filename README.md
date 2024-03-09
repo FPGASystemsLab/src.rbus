@@ -36,3 +36,25 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 ## Acknowledgements
 
 This project builds on years of research and development in FPGA-based NoC designs. We extend our gratitude to the academic and open-source communities for their invaluable contributions to this field.
+
+## Citing RingNet
+
+If you use RingNet in your research or wish to refer to the benchmark results, please consider citing our IEEE Transactions on Very Large Scale Integration (VLSI) Systems article:
+
+J. Siast, A. Łuczak and M. Domański, "RingNet: A Memory-Oriented Network-On-Chip Designed for FPGA," in IEEE Transactions on Very Large Scale Integration (VLSI) Systems, vol. 27, no. 6, pp. 1284-1297, June 2019, doi: 10.1109/TVLSI.2019.2899575.
+
+Additionally, you can use the following BibTeX entry for LaTeX users:
+
+```bibtex
+@ARTICLE{8663289,
+  author={Siast, Jakub and Łuczak, Adam and Domański, Marek},
+  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems}, 
+  title={RingNet: A Memory-Oriented Network-On-Chip Designed for FPGA}, 
+  year={2019},
+  volume={27},
+  number={6},
+  pages={1284-1297},
+  keywords={Field programmable gate arrays;Table lookup;Random access memory;Throughput;Routing;Switches;Lattices;Distributed memory;lookup table RAM (LUTRAM);fairness;field-programmable gate array (FPGA);network-on-chip (NoC);virtual cut-through},
+  doi={10.1109/TVLSI.2019.2899575}
+}
+```
