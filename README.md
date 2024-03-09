@@ -58,3 +58,9 @@ Additionally, you can use the following BibTeX entry for LaTeX users:
   doi={10.1109/TVLSI.2019.2899575}
 }
 ```
+
+For more information and access to the full paper, visit:
+
+- [IEEE Xplore](https://ieeexplore.ieee.org/document/8663289)
+- [Chair of Multimedia Telecommunications and Microelectronics, PDF](http://multimedia.edu.pl/publications/RingNet-A-Memory-Oriented-Network-On-Chip-Designed-for-FPGA.pdf)
+
