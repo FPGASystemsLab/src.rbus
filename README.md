@@ -31,7 +31,10 @@ Contributions are welcome! Whether it's feature enhancements, bug fixes, or docu
 
 ## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under a custom license that allows for unrestricted use, modification, and distribution of the project provided that the original work is properly cited as specified below:
+
+J. Siast, A. Łuczak and M. Domański, "RingNet: A Memory-Oriented Network-On-Chip Designed for FPGA," in IEEE Transactions on Very Large Scale Integration (VLSI) Systems, vol. 27, no. 6, pp. 1284-1297, June 2019, doi: 10.1109/TVLSI.2019.2899575.
+
 
 ## Acknowledgements
 
