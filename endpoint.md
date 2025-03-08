@@ -71,10 +71,10 @@ The RingNet network uses two types of packets: long and short, which differ in s
 
 | Value | Type | Description |
 |-------|------|-------------|
-| 2'b00 | MEM_READ_1 | Single word read |
-| 2'b01 | MEM_READ_8 | 8-word read |
+| 2'b00 | MEM_READ_1 | Short burst of 1 long word read (64 bits)|
+| 2'b01 | MEM_READ_8 | Long burst of 8 long words read (8 x 64-bits) |
 | 2'b10 | MEM_WRITE | Data write |
-| 2'b11 | MEM_UPDATE | Data update |
+| 2'b11 | MEM_UPDATE | Data update ((srote bytes with mask set to true, and fresh read all bytes from memory|
 
 ## Control Word Structure
 
