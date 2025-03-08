@@ -44,6 +44,8 @@ RingNet consists of several key components that together form an efficient netwo
    - Responsible for injecting and extracting packets from rings
    - Implement flow control and buffering mechanisms
 
+For a detailed description of the network EndPoint structure, packet formats, and control mechanisms, see the [EndPoint Documentation](endpoint.md).
+
 ### Communication Protocol
 
 RingNet uses a dedicated packet-based communication protocol defined in `rbus_defs.sv`:
