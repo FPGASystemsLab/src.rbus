@@ -13,6 +13,84 @@ RingNet is a novel network-on-chip (NoC) architecture designed specifically for 
 - **Distributed Memory Utilization:** Leverages distributed memory within FPGA for small buffers in switches, enhancing the data handling efficiency.
 - **Comprehensive Simulation Framework:** Includes a full suite of Verilog/SystemVerilog components for simulation, offering insights into network performance and scalability.
 
+## System Architecture
+
+RingNet consists of several key components that together form an efficient network-on-chip:
+
+### Main Components
+
+1. **Communication Rings:**
+   - Basic communication structure in the topology
+   - Implemented as bidirectional channels with FIFO buffers
+   - Support different traffic priorities for Quality of Service (QoS)
+
+2. **Routers (Slice Router Boxes):**
+   - The `rsbus_slice_rt_box.sv` module implements routing functionality
+   - Handles packet routing between different rings in the tree topology
+   - Supports adaptive routing algorithms for optimized data flow
+
+3. **Switches (Switch Boxes):**
+   - The `rsbus_slice_sw_box*.sv` modules implement various switch configurations
+   - Optimized for FPGA resource utilization
+   - Support virtual cut-through switching for latency minimization
+
+4. **Communication Managers:**
+   - The `rsbus_d2r_mgr.sv` module manages device-to-ring communication
+   - Buffers requests from devices and grants ring access according to priorities
+   - Handles ring initialization and "owned" packet detection
+
+5. **Extractors and Injectors:**
+   - Modules `rsbus_d2r_extractor.sv`, `rsbus_d2r_injector.sv`, `rsbus_r2d_extractor.sv`, `rsbus_r2d_injector.sv`
+   - Responsible for injecting and extracting packets from rings
+   - Implement flow control and buffering mechanisms
+
+### Communication Protocol
+
+RingNet uses a dedicated packet-based communication protocol defined in `rbus_defs.sv`:
+
+- **Packet Structure:**
+  - Header containing address information, priority, memory operation
+  - Payload containing data and byte enable markers
+  - Support for different memory operation types: read, write, update
+
+- **Addressing:**
+  - Hierarchical network addressing using local identifiers (LID)
+  - Support for physical and virtual address spaces
+
+- **Priorities:**
+  - Four priority levels (0-3) for different traffic classes
+  - Mechanisms to prevent deadlocks and ensure fair access
+
+## Project Directory Structure
+
+The RingNet project is organized into the following directories:
+
+- **`core/`**: Contains core network components such as communication managers, frame generators, extractors, and injectors
+- **`slice/`**: Contains components related to network segments, including routers and switches in various configurations
+- **`devring/`**: Contains components related to the device ring, including interfaces for UART, VGA, and other peripheral devices
+- **`sim/`**: Contains simulation components, traffic generators, and test environment
+- **`root/`**: Contains configuration files and main system components
+
+## Implementation and Optimizations
+
+RingNet includes several FPGA-specific optimizations:
+
+1. **Buffer Optimization:**
+   - Utilization of distributed LUTRAM memory for small FIFO buffers
+   - Balanced use of Block RAM resources for larger buffers
+
+2. **Switch Optimization:**
+   - 3-port switches optimized for FPGA architecture
+   - Minimization of latency and logic resources
+
+3. **Flow Control Mechanisms:**
+   - Advanced mechanisms to prevent buffer overflow
+   - Handling of different traffic priorities for quality of service
+
+4. **Scalability:**
+   - Parameterized components allowing easy network scaling
+   - Support for different tree-of-rings topology configurations
+
 ## Applications
 
 RingNet is particularly suited for FPGA-based System-on-Chip (SoC) designs, with a special focus on high-volume data processing applications such as video processing. Its efficient implementation demonstrates superior performance metrics, including higher maximum clock frequencies and lower resource consumption, making it a compelling alternative to existing NoC solutions.
@@ -22,8 +100,23 @@ RingNet is particularly suited for FPGA-based System-on-Chip (SoC) designs, with
 This repository contains all necessary Verilog/SystemVerilog files for RingNet's implementation, along with simulation environments and examples. To get started:
 
 1. Clone the repository to your local machine.
-2. Navigate to the `simulation` directory for testbenches and simulation setups.
+2. Navigate to the `sim` directory for testbenches and simulation setups.
 3. Follow the setup instructions in the `docs` directory for detailed guidance on compiling and running simulations.
+
+### Example Usage
+
+To build and simulate a basic RingNet configuration:
+
+```bash
+# Compile components
+iverilog -f files_for_sim.lst -o ringnet_sim
+
+# Run simulation
+vvp ringnet_sim
+
+# Visualize results (requires GTKWave)
+gtkwave sim_results.vcd
+```
 
 ## Contribution
 
